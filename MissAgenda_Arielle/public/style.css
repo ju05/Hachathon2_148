@@ -1,0 +1,66 @@
+/* Container for the task list */
+#listTasks {
+    margin-top: 20px;
+}
+
+/* Category section styling */
+.category-section {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Align tasks horizontally */
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 5px 0;
+}
+
+/* Checkbox alignment */
+.task-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Task description styling */
+.task-item p {
+    margin: 0;
+    flex: 2;
+}
+
+/* Task order input styling */
+.task-item input[type="number"] {
+    width: 50px;
+    text-align: center;
+}
+
+/* Deadline styling */
+.task-item .deadline {
+    flex: 1;
+}
+
+/* Button styling */
+.task-item button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.task-item button:hover {
+    opacity: 0.9;
+}
+
+/* General spacing for form fields */
+#taskForm div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#taskForm input, #taskForm select, #taskForm button {
+    padding: 5px;
+    font-size: 14px;
+}

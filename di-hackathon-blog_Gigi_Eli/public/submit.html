@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit a Blog Post</title>
+    <link rel="stylesheet" href="submit.css">
+</head>
+<body>
+    <header>
+        <h1>Submit Your Blog Post</h1>
+    </header>
+    <main>
+        <button class="back-btn" onclick="window.location.href='/'">Back</button>
+
+        <form id="blogPostForm" onsubmit="handleSubmit(event)">
+            <label for="title">Post Title:</label>
+            <input type="text" id="title" name="title" placeholder="Enter your blog title" required>
+
+            <label for="publishDate">Publish Date:</label>
+            <input type="date" id="publishDate" name="publishDate" required>
+
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" placeholder="Your name" required>
+
+            <label for="coverImage">Cover Image:</label>
+            <input type="url" id="coverImage" name="coverImage" placeholder="https://www.yourimagelink.com" required>
+
+            <label for="content">Post Content:</label>
+            <textarea id="content" name="content" rows="10" placeholder="Write your blog content here..." required></textarea>
+
+            <button type="submit">Submit Blog Post</button>
+        </form>
+    </main>
+    <script src="script.js">       
+    </script>
+</body>
+</html>

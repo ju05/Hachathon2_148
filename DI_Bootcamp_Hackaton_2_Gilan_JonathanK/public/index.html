@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="battle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <title>Wordeneering</title>
+    <script src="./script.js" async defer></script>
+</head>
+
+<body>
+    <nav>
+        <h1>Wordeneering</h1>
+    </nav>
+
+    <section id="MonsterCards" style="display: block;">
+        <div id="card_container"></div>
+    </section>
+
+    <section id="Battle" style="display: none;">
+        <div id="PlayerArea">
+            <div id="player_stats">
+                <p id="player_health" class="player_info">PLAYER HEALTH:</p>
+                <p id="player_XP" class="player_info">PLAYER XP:</p>
+            </div>            
+            <form id='spell_form'>
+                <input type="text" name="spell_input" id="spell_input" placeholder="Enter Spell">
+                <button id="spell_btn">Cast</button>
+            </form>
+            <div id="BattleLogs">
+                <div id="battle_log_container">
+                  <ul id="battle_log_list">
+
+                  </ul>
+                </div>
+              </div>
+            <button id="heal_player">Heal Player</button>
+            <button id="toggle_categories">Toggle Categories</button>
+        </div>
+        <table id="word_table" style="display: none;">
+            <caption>Categories</caption>
+
+        </table>
+    </section>
+    <div style="height: 100px;"></div>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="./res/session.css">
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Learning Session</h1>
+            <button id="fin">Finish (Esc)</button>
+        </header>
+
+        <div id="app">
+
+            <div id="container" class="scrollable">
+                <div class="filler"></div>
+                <div class="filler"></div>
+            </div>
+
+        </div>
+
+        <footer>
+            <div id="footer-container">
+
+                <div id="show-answer-panel">
+                    <button class="btn show-answer">Show answer (Space)</button>
+                </div> 
+
+                <div id="result-panel">
+                    <button class="btn bad">Bad (1)</button>
+                    <button class="btn good">Good (2)</button>
+                </div>
+
+            </div>
+        </footer>
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="./res/session.js"></script>
+    </body>
+</html>

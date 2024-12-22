@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div id="headerContent">
+      <h1>Weather Dashboard</h1>
+      <div id="searchSection">
+        <input type="text" id="cityInput" placeholder="Enter city">
+        <button id="getWeatherBtn">Get Weather</button>
+      </div>
+      <button id="addCityBtn">Add to Favorites ❤️</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="weatherDisplay">
+      <h2 id="cityName"></h2>
+      <p id="weatherDescription"></p>
+      <p id="temperature"></p>
+      <p id="humidity"></p>
+      <p id="windSpeed"></p>
+    </div>
+
+    <div id="favoritesList">
+      <h2>Your Favorite Cities</h2>
+      <ul id="favoriteCities"></ul>
+    </div>
+  </main>
+
+  <footer>
+    <button id="musicToggle">🎵 Toggle Music</button>
+    <audio id="backgroundMusic" loop>
+      <source src="https://minecraft.wiki/images/transcoded/Minecraft.ogg/Minecraft.ogg.mp3" type="audio/mp3">
+    </audio>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+
+
+
+

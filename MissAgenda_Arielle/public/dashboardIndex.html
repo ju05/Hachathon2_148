@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer async></script>
+    <title>Dashboard</title>
+</head>
+<body>
+    <div style="margin-bottom: 20px;">
+        <label for="usernameInput">Enter your username: </label>
+        <input type="text" id="usernameInput" placeholder="Your name">
+    </div>
+    <h1>Welcome to your To Do Dashboard</h1>
+    <form id="taskForm">
+        <div style="display: flex; gap: 10px;">
+            <input type="text" id="taskInput" placeholder="Enter a task" style="flex: 2;">
+            <select id="categoryInput">
+                <option value="Select a category">Select a category</option>
+                <option value="Bank">Bank</option>
+                <option value="Wet Market">Wet Market</option>
+                <option value="Administration">Administration</option>
+                <option value="Cleaning the House">Cleaning the House</option>
+                <option value="Prepare Shabbat">Prepare Shabbat</option>
+                <option value="Study">Study</option>
+                <option value="Read the Weekly Paracha">Read the Weekly Paracha</option>
+                <option value="Miscellaneous">Miscellaneous</option>
+            </select>
+            <input type="date" id="deadlineInput" style="flex: 1;">
+            <button type="button" id="submitTaskButton">Submit</button>
+        
+            <button type="button" id="clearCompletedButton">Clear Completed</button>
+        </div>
+    </form>
+    <div id="listTasks"></div>
+    
+</body>
+</html>

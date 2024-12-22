@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Recipes</title>
+    <link rel="stylesheet" href="./css/myrecipes.css" />
+    <link rel="stylesheet" href="./css/homepage.css" />
+  </head>
+  <body>
+    <section id="navbar">
+      <ul>
+        <h2>Recipes Blog</h2>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="myrecipes.html">My recipes</a></li>
+        <li><a href="myfavorites.html">My favorites</a></li>
+        <div id="searchbar">
+          <input
+            id="search"
+            type="text"
+            placeholder="Search recipe, ingredient, user..."
+          />
+        </div>
+        <button id="logout-btn">Logout</button>
+      </ul>
+    </section>
+    <h1 id="usernameRecipe"></h1>
+    <button id="openModalBtn">Add a New Recipe Here</button><br />
+    <br />
+    <section id="userrecipes"></section>
+
+    <!-- Overlay -->
+    <div id="overlay"></div>
+
+    <!-- Modal -->
+    <div id="recipeModal">
+      <div class="modal-header">
+        Add a New Recipe
+        <span class="modal-close" id="closeModalBtn">&times;</span>
+      </div>
+      <form id="recipe-form">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required /> <br />
+        <br />
+
+        <label for="is_vegan">Is Vegan:</label>
+        <select id="is_vegan" name="is_vegan">
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        </select>
+        <br />
+        <br />
+
+        <label for="picture_url">Picture URL:</label>
+        <input type="url" id="picture_url" name="picture_url" required />
+
+        <h3>Ingredients:</h3>
+        <ul id="ingredients-list"></ul>
+        <button type="button" id="add-ingredient">Add Ingredient</button>
+
+        <h3>Description Steps:</h3>
+        <ul id="description-list"></ul>
+        <button type="button" id="add-step">Add Step</button> <br />
+        <br />
+
+        <button type="submit">Submit Recipe</button>
+      </form>
+
+      <!-- Template for dynamic input -->
+      <template id="ingredient-template">
+        <li>
+          <input
+            type="text"
+            class="ingredient-input"
+            placeholder="Enter an ingredient"
+            required
+          />
+          <button type="button" class="remove-ingredient remove-button">
+            Remove
+          </button>
+        </li>
+      </template>
+
+      <template id="step-template">
+        <li>
+          <textarea
+            class="step-input"
+            placeholder="Enter a step"
+            required
+          ></textarea>
+          <button type="button" class="remove-step remove-button">
+            Remove
+          </button>
+        </li>
+      </template>
+    </div>
+
+    <div id="update-modal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span id="close-modal" class="close">&times;</span>
+        <h2>Update Recipe</h2>
+        <form id="update-recipe-form">
+          <input type="hidden" id="recipe-id" />
+
+          <label for="update-title">Title:</label>
+          <input type="text" id="update-title" name="title" required />
+          <br /><br />
+
+          <label for="update-picture-url">Picture URL:</label>
+          <input type="text" id="update-picture-url" name="picture_url" />
+          <br /><br />
+
+          <label for="update-is-vegan">Is Vegan:</label>
+          <select id="update-is-vegan" name="is_vegan">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+          </select>
+          <br /><br />
+
+          <label>Ingredients:</label>
+          <div id="update-ingredients-list"></div>
+          <button type="button" id="add-ingredient-update">
+            Add Ingredient
+          </button>
+          <br /><br />
+
+          <label>Steps:</label>
+          <div id="update-steps-list"></div>
+          <button type="button" id="add-step-update">Add Step</button>
+          <br /><br />
+
+          <button type="submit">Update</button>
+        </form>
+      </div>
+    </div>
+    <script src="./js/myrecipes.js"></script>
+  </body>
+</html>

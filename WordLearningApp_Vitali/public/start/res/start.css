@@ -1,0 +1,125 @@
+:root {
+    --prussian-blue: #273043ff;
+    --cool-gray: #9197aeff;
+    --mint-cream: #eff6eeff;
+    --imperial-red: #f02d3aff;
+    --rojo: #dd0426ff;
+}
+ 
+body {
+    margin: 0;
+    background-color: var(--mint-cream);
+}
+
+#header {
+    position: absolute;
+    top: 0;
+    min-width: 100%;
+    min-height: 150px;
+    background-color: var(--prussian-blue);
+    color: var(--rojo);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+
+    min-width: 100%;
+    min-height: 100px;
+
+    background-color: var(--prussian-blue);
+    color: var(--rojo);
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+footer h3 {
+    padding-right: 20px;
+}
+
+
+#header h1 {
+    font-size: 60px;
+    font-family: "Comic Neue", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.container {
+    min-height: 100vh;
+    min-width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel {
+    background-color: var(--cool-gray);
+    padding: 10px;
+
+    width: 50%;
+    height: 40%;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 10px;
+}
+
+.panel > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    min-width: 90%;
+}
+
+.panel input {
+    border-radius: 10px;
+    /* min-width: 200px; */
+    width: 100%;
+    min-height: 30px;
+    font-size: 24px;;
+    padding: 10px;
+}
+
+.switch {
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+}
+
+.submit {
+    width: 100%;
+    border-radius: 4px;
+    font-size: 24px;
+}
+
+.disappearing {
+    opacity: 1;
+    animation: fade-out 0.5s ease-out forwards;
+}
+
+.appearing {
+    opacity: 0;
+    animation: fade-in 0.5s ease-in forwards;
+}
+
+@keyframes fade-in{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fade-out{
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}

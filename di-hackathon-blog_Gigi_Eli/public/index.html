@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1 id="mainPage">Our Blog</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search for blog posts..." onkeyup="searchPosts()">
+        </div>
+    </header>
+
+    <p id="noResultsMessage" style="display: none; text-align: center; color: red;">No results found</p>
+
+    <div class="submit-container">
+        <button onclick="window.location.href='submit.html'">Submit a Blog Post</button>
+    </div>
+
+    <main id="blogPosts">
+
+    </main>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

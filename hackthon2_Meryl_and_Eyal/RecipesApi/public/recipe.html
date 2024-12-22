@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One recipe</title>
+    <link rel="stylesheet" href="./css/homepage.css" />
+    <link rel="stylesheet" href="./css/recipe.css" />
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+  </head>
+  <body>
+    <section id="navbar">
+      <ul>
+        <h2>Recipes Blog</h2>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="myrecipes.html">My recipes</a></li>
+        <li><a href="myfavorites.html">My favorites</a></li>
+        <button id="logout-btn">Logout</button>
+      </ul>
+    </section>
+    <section id="recipe"></section>
+
+    <h2>Comments</h2>
+
+    <form id="comment-form">
+      <textarea
+        id="comment-content"
+        placeholder="Write your comment here..."
+        required
+      ></textarea>
+      <button type="submit">Add Comment</button>
+    </form>
+
+    <div id="comments-list"></div>
+    <script src="./js/recipe.js"></script>
+  </body>
+</html>

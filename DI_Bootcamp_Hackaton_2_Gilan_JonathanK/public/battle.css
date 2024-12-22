@@ -1,0 +1,265 @@
+/* Colors */
+:root {
+    /* General Theme Colors */
+    --shadow_woodbrown: #261206;
+    --woodbrown: #593616;
+    --lightwood: #8C5A1C;
+    --woodhighlight: #BF9E60;
+    --woodbrighthighlight: #F2E1AE;
+  
+    /* RPG Glow and Accent Colors */
+    --rpg-accent: #FFD700;
+    --rpg-glow: rgba(255, 215, 0, 0.4);
+  }
+  
+/* Battle Section Layout */
+#Battle {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+#PlayerArea {
+  width: 45%;
+  padding: 5%;
+  box-sizing: border-box;
+}
+
+/* Player Stats - RPG Style */
+#player_stats {
+  margin-top: -30px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 20px;
+  font-family: "MedievalSharp", serif;
+  color: var(--woodbrighthighlight);
+  background-color: var(--lightwood);
+  border: 6px ridge var(--woodbrown);
+  box-shadow: inset 0 0 10px var(--shadow_woodbrown), 0 8px 16px var(--woodhighlight);
+  border-radius: 12px;
+  position: relative;
+}
+
+#player_stats::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 12px;
+  border: 3px solid var(--rpg-accent);
+  box-shadow: 0 0 10px var(--rpg-glow);
+  pointer-events: none;
+}
+
+/* Spell Form - RPG Style */
+#spell_form {
+  margin-top: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 20px;
+  font-family: "MedievalSharp", serif;
+  color: var(--woodbrighthighlight);
+  background-color: var(--lightwood);
+  border: 6px ridge var(--woodbrown);
+  box-shadow: inset 0 0 10px var(--shadow_woodbrown), 0 8px 16px var(--woodhighlight);
+  border-radius: 12px;
+  position: relative;
+}
+
+#spell_form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 12px;
+  border: 3px solid var(--rpg-accent);
+  box-shadow: 0 0 10px var(--rpg-glow);
+  pointer-events: none;
+}
+
+#spell_form input {
+  font-family: "MedievalSharp", serif;
+  font-size: 18px;
+  color: var(--woodbrighthighlight);
+  background-color: var(--lightwood);
+  border: 4px ridge var(--woodbrown);
+  border-radius: 8px;
+  padding: 10px 15px;
+  box-shadow: inset 0 0 6px var(--shadow_woodbrown), 0 4px 8px var(--woodhighlight);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#spell_form input::placeholder {
+    color: var(--rpg-accent);
+    opacity: 1;
+}
+#spell_form input:focus {
+  border-color: var(--rpg-accent);
+  box-shadow: 0 0 10px var(--rpg-glow), inset 0 0 8px var(--rpg-accent);
+}
+
+button {
+  font-family: "MedievalSharp", serif;
+  font-size: 18px;
+  color: var(--woodbrighthighlight);
+  background-color: var(--lightwood);
+  border: 4px ridge var(--woodbrown);
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: inset 0 0 6px var(--shadow_woodbrown), 0 4px 8px var(--woodhighlight);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--woodhighlight);
+  color: var(--rpg-accent);
+  box-shadow: 0 0 10px var(--rpg-glow), 0 6px 12px var(--woodhighlight);
+}
+
+button:active {
+  background-color: var(--lightwood);
+  box-shadow: inset 0 0 10px var(--shadow_woodbrown), 0 2px 4px var(--woodhighlight);
+  transform: translateY(2px);
+}
+
+#toggle_categories{
+  margin-top: 20px;
+}
+
+
+/* Categories */
+
+#word_table {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+    gap: 10px;
+    user-select: none;
+}
+
+#word_table th, #word_table td {
+
+    padding: 12px;
+    text-align: center;
+    border: 2px solid var(--woodbrown);
+}
+
+#word_table th {
+    background-color: var(--woodbrown);
+    color: var(--woodbrighthighlight);
+    border: 2px solid var(--shadow_woodbrown);
+    font-family: "MedievalSharp", serif;
+    font-size: 20px;
+    text-transform: uppercase;
+
+}
+
+#word_table td {
+    background-color: var(--lightwood);
+    color: black;
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+}
+
+#word_table tr:nth-child(even) td {
+    background-color: var(--woodhighlight); /* Alternating row color */
+}
+
+#word_table tr:hover td {
+    background-color: var(--rpg-glow); /* Highlight rows when hovered */
+}
+
+#word_table tbody td {
+    text-align: center; /* Ensure words are centered in the cells */
+}
+
+/* Styling for the win message container */
+.win-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: var(--woodbrown);
+    color: var(--woodbrighthighlight);
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px var(--shadow_woodbrown), 0 8px 16px var(--woodhighlight);
+    font-family: "MedievalSharp", serif;
+    font-size: 24px;
+}
+
+
+/* Battle Log */
+/* Battle Log Container */
+#BattleLogs {
+  display: block;
+  background-color: var(--woodbrighthighlight);
+  padding: 15px;
+  border: 6px ridge var(--woodbrown);
+  box-shadow: inset 0 0 10px var(--shadow_woodbrown), 0 8px 16px var(--woodhighlight);
+  border-radius: 12px;
+  font-family: "MedievalSharp", serif;
+  font-size: 18px;
+  max-height: 170px;
+  overflow-y: auto;
+  margin: 10px auto;
+}
+
+/* Battle Log List */
+#battle_log_container {
+  overflow-y: auto;
+  max-height: 250px;
+}
+
+#battle_log_list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  color: var(--woodbrown);
+}
+
+#battle_log_list li {
+  background-color: var(--woodhighlight);
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 8px;
+  border: 2px solid var(--woodbrown);
+  box-shadow: inset 0 0 6px var(--shadow_woodbrown), 0 4px 8px var(--woodhighlight);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect on Log Entries */
+#battle_log_list li:hover {
+  background-color: var(--woodhighlight);
+  color: var(--rpg-accent);
+  box-shadow: 0 0 10px var(--rpg-glow);
+}
+
+/* Special Message for Healing or Spell Fail */
+#battle_log_list li.spell-fail {
+  background-color: var(--rpg-glow);
+  color: var(--woodbrown);
+}
+
+#battle_log_list li.enemy-healed {
+  background-color: var(--woodhighlight);
+  color: var(--woodbrighthighlight);
+}

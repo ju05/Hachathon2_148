@@ -1,0 +1,273 @@
+body {
+  margin: 0;
+  background-image: url("https://media.istockphoto.com/id/1829241109/photo/enjoying-a-brunch-together.webp?a=1&b=1&s=612x612&w=0&k=20&c=PDAOJZowRgcFpLORXCV5p9Yt4wuOlxpYkxOUk5M4koo=");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: -1;
+}
+
+.ingredient-input,
+.step-input {
+  width: 400px; 
+  max-width: 500px; 
+  padding: 12px; 
+  border-radius: 8px; 
+  border: 1px solid #ccc; 
+  box-sizing: border-box; 
+  font-size: 16px; 
+}
+
+.ingredient-input textarea,
+.step-input textarea {
+  resize: vertical; 
+  min-height: 100px; 
+}
+
+h1#usernameRecipe {
+  padding: 10px 0 10px 0;
+  text-align: center;
+  font-size: 40px;
+  color: rgb(95, 47, 95);
+  margin: 20px 0;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+ul li a:hover {
+  background-color: #ff8ca2;
+  color: white;
+}
+
+.onerecipe {
+  border: 2px solid black;
+  width: 300px;
+  height: 400px;
+}
+
+#userrecipes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+img {
+  width: 300px;
+  height: 200px;
+}
+
+#openModalBtn {
+  padding: 15px 30px;
+  background-color: #ff8ca2;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  position: fixed;
+  top: 175px;
+  right: 20px;
+  z-index: 999;
+}
+
+#openModalBtn:hover {
+  background-color: #ff6f84;
+  transform: scale(1.05);
+}
+
+#recipeModal,
+#update-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 1000;
+  border-radius: 8px;
+  max-height: 90%;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.modal-header {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: rgb(95, 47, 95);
+  position: relative;
+}
+
+.modal-close {
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: rgb(95, 47, 95);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+  color: #ff8ca2;
+}
+
+#update-recipe-form input,
+select {
+  width: calc(100% - 100px);
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+#update-recipe-form,
+#recipe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#update-recipe-form label,
+#recipe-form label {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+#title,
+#picture_url,
+#recipe-form select {
+  width: calc(100% - 100px);
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+#update-recipe-form button,
+#recipe-form button {
+  background-color: #ff6666;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+#update-recipe-form button:hover,
+#recipe-form button:hover {
+  background-color: #ff6f84;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: rgb(95, 47, 95);
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+ul li input,
+ul li textarea {
+  flex: 1;
+}
+
+.remove-ingredient,
+.remove-step {
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: background 0.3s ease;
+}
+
+.remove-ingredient:hover,
+.remove-step:hover {
+  background: #c82333;
+}
+
+ul li .remove-ingredient,
+ul li .remove-step {
+  margin-left: 10px;
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+#close-modal {
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: rgb(95, 47, 95);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transition: color 0.3s ease;
+}
+
+#close-modal:hover {
+  color: #ff8ca2;
+}
+
+#ingredients-list, #description-list{
+  display: flex;
+  flex-direction: column;
+}

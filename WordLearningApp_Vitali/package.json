@@ -1,0 +1,36 @@
+{
+  "name": "wordlearningapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "up": "npx knex migrate:up",
+    "down": "npx knex migrate:down",
+    "test": "mocha --exit",
+    "reglog": "mocha -g 'registration' --exit",
+    "reset": "npx knex migrate:down && npx knex migrate:up && npx knex seed:run",
+    "cardscrud": "mocha -g 'crud' --exit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "knex": "^3.1.0",
+    "nodemon": "^3.1.9",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "pg": "^8.13.1",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1"
+  },
+  "devDependencies": {
+    "chai": "^4.4.1",
+    "mocha": "^11.0.1",
+    "supertest": "^7.0.0"
+  }
+}
